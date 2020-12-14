@@ -43,5 +43,12 @@ class Player(models.Model):
     t20_fifties=models.IntegerField(default=0)
     t20_hundreds=models.IntegerField(default=0)
 
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()    
+    
+    def get_absolute_url(self):
+        return reverse("player_detail", kwargs={'pk': self.pk})    
+
     def __str__(self):
         return self.name
