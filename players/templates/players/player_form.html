@@ -1,0 +1,27 @@
+{% extends "players/base.html"%}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <div class="content-section jumbotron m-3">
+        <form method="POST" enctype="multipart/form-data"> 
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class='border-bottom mb-4 text-center'>New Player</legend>
+            {% for field in form%}
+            <div class="text-wrap form-text form-">
+            {{field.label_tag}} 
+        </div>
+            <div class="ml-3 form-control-lg">
+            {{field}} 
+        </div><br>
+            {% endfor %}
+            
+        </fieldset>
+        <div class="text-center">
+            <button class='btn btn-outline-success justify-center' type='submit'>Add Player</button>
+        </div>
+        
+        </form>
+    </div>
+
+{% endblock content%}

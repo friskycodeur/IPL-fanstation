@@ -1,4 +1,14 @@
-{% extends "blog/base.html" %}
+{% extends "players/base.html" %}
 {% block content %}
-
-{% end block%}
+<div class="jumbotron m-3">
+  <h1 class="text-center m-3">
+    <strong> {{object.name}} </strong>
+</h1>
+    <p class="card-text mb-3 text-center">
+        {{object.nationality}}
+      </p>
+  <p class="card-text m-3">
+  </p>
+  
+</div>
+{% endblock content %}
