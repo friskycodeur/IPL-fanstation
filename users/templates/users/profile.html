@@ -1,0 +1,29 @@
+{% extends "players/base.html"%}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+<div class="jumbotron mt-3">
+    <div class="media">
+      <div class="media-body">
+        <h2 class="account-heading text-center">Welcome , {{ user.username }} !</h2>
+        <p class="text-secondary text-center">{{ user.email }}</p>
+      </div>
+    </div>
+    <!-- FORM HERE -->
+    <div class="content-section mt-3">
+      <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <fieldset class="form-group">
+        <legend class='border-bottom mb-4 text-center'>Profile Details </legend>
+        {{ u_form|crispy  }}
+        
+    </fieldset>
+    <div class="text-center">
+        <button class='btn justify-center btn-success' type='submit'>Update</button>
+      </div>
+      </form>
+      </div>
+  </div>
+
+{% endblock content %}
