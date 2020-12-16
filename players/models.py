@@ -6,8 +6,8 @@ class Player(models.Model):
     name=models.CharField(max_length=50)
     age=models.IntegerField()
     nationality=models.CharField(max_length=15)
-    role_choices=[('Bat','Batsman'),('Bowl','Bowler'),('All','All Rounder'),]
-    role=models.CharField(max_length=7,choices=role_choices,default='Bat')
+    role_choices=[('Batsman','Batsman'),('Bowler','Bowler'),('All-Rounder','All Rounder'),]
+    role=models.CharField(max_length=12,choices=role_choices,default='Bat')
     batting_style=models.CharField(max_length=20)
     bowling_style=models.CharField(max_length=20)
     #IPL stats

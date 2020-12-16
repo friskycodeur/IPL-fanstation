@@ -2,14 +2,39 @@
 {% block content %}
 <div class="center-stage">
     {% for player in player_list %}
-    
-    <div class="post text-center">
-        <h1><a href="{% url 'player_detail' pk=player.pk %}">{{player.name}} </a></h1>
-        <div class="date">
-            <p class="text-muted"> {{player.nationality}} </p>
+    <div class="columns is-mobile is-centered">
+<div class="column is-half m-4">
+    <div class="card box">
+      <article>
+        <div class="columns is-vcentered is-fullheight">
+            <div>
+                <figure class="image is-128x128">
+                    <img src="https://m.cricbuzz.com/a/img/v1/192x192/i1/c170673/kl-rahul.jpg" class="is-rounded">
+                  </figure>
+            </div>
+          <div class="column">
+            <h2 class="title"><a href="{% url 'player_detail' pk=player.pk %}">{{player.name}}</a></h2>
+            <p class="name subtitle">{{player.nationality}}
+            <span class="tag is-danger">{{player.role}}</span></p>
+          </div>
+          <div class="column">
+              <p><b> Matches :</b> {{player.total_matches}}</p>
+              <p><b> Runs : </b>{{player.total_runs}}</p>
+            <p> <b> Wickets: </b> {{player.total_wickets}}</p>
+            <p> <b> Highest Score: </b> {{player.highest_score}}</p>
+            <p> <b> Best Bowling: </b> {{player.best_bowling_figures}}</p>
+            <p> <b> Half Centuries: </b> {{player.fifties}}</p>
+          </div>
         </div>
+        <div class="columns is-vcentered">
+          <div class="column"><a class="button is-small is-info level-item" href="/client/view/1"><span class="icon is-small"></span><span>Full Profile</span></a></div>
+          <div class="column"><a class="button is-small is-warning level-item" href="/client/edit/1"><span class="icon is-small"></span><span>Instagram</span></a></div>
+          <div class="column"><a class="button is-small is-info level-item" href="/client/edit/1"><span class="icon is-small"></span><span>Twitter</span></a></div>
+        </div>
+      </article>
     </div>
-    
+  </div>
+</div>
     
     {% endfor %}
 </div>
