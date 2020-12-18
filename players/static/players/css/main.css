@@ -1,6 +1,7 @@
-.vertical-center {
-    display: flex;
-    justify-content: center;
-    margin: 30px;
-    margin-left: 25%;
-  }
+body{
+  font-family: 'Padauk', sans-serif;
+}
+
+.nav.navbar-nav.navbar-right li a {
+  color: blue;
+}
