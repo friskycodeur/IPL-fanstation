@@ -1,16 +1,27 @@
 body{
   font-family: 'Padauk', sans-serif;
+  background-color: whitesmoke;
 }
 
 .navbar-custom {
-  background-color:#70af85 !important; 
+  background-color:#A8D49D !important; 
 }
 
 
 .card-container{
-  background-color: #70af85;
+  background-color: #4EA838;
   width: 70vw;
   margin: 10px auto;
   border: 1px solid #70af85 ;
   border-radius: 10px;
+}
+
+footer{
+  display: flex;
+  background-color: #A8D49D;
+  width: 25%;
+  border: 1px solid #fff ;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 10px;
 }

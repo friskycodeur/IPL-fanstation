@@ -30,7 +30,7 @@
     <nav
       class="sticky-top navbar navbar-expand-lg navbar-dark bg-primary navbar-custom"
     >
-    <a class="navbar-brand mr-4 text-white-50 font-weight-bold" href="{% url 'player_list' %}">IPLFanStation</a>
+    <a class="navbar-brand mr-4 text-black-50 font-weight-bold" href="{% url 'player_list' %}">IPLFanStation</a>
      <!-- Search bar -->
 <!-- <div class="search-bar">
 <form action="/search" method="get">
@@ -40,13 +40,13 @@
       <!-- Social media handles -->
       <ul class="navbar-nav ml-auto nav-flex-icons">
         <li class="nav-item">
-            <a class="nav-link waves-effect waves-light"><i class="fa fa-twitter fa-2x"></i></a>
+            <a class="nav-link waves-effect waves-light text-black-50"><i class="fa fa-twitter fa-2x"></i></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link waves-effect waves-light"><i class="fa fa-instagram fa-2x"></i></a>
+            <a class="nav-link waves-effect waves-light text-black-50"><i class="fa fa-instagram fa-2x"></i></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link waves-effect waves-light"><i class="fa fa-pinterest fa-2x"></i></a>
+            <a class="nav-link waves-effect waves-light text-black-50"><i class="fa fa-pinterest fa-2x"></i></a>
         </li>
         {% if user.is_authenticated %}
         <li class="nav-item dropdown">
@@ -63,7 +63,7 @@
             <a class="nav-link mt-1 btn btn-light text-black-50" href="{% url 'register' %}">Sign Up</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link mt-1" href="{% url 'login' %}">Login</a>
+            <a class="nav-link mt-1 text-black-50" href="{% url 'login' %}">Login</a>
         </li>
         {% endif %}
     </ul>
@@ -79,9 +79,9 @@
         {% block content %}
 
         {% endblock %}</div>
-        <footer id="main-footer" class="footer">
+        <footer id="main-footer" class="mx-auto d-block mt-auto px-2">
           <div class="content text-center">
-            <div class="">
+            <div class="text-black-50">
               <p class="mb-2">Copyright &copy; 2020, All Rights Reserved</p>
             </div>
           </div>
