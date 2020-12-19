@@ -2,6 +2,15 @@ body{
   font-family: 'Padauk', sans-serif;
 }
 
-.nav.navbar-nav.navbar-right li a {
-  color: blue;
+.navbar-custom {
+  background-color:#70af85 !important; 
+}
+
+
+.card-container{
+  background-color: #70af85;
+  width: 70vw;
+  margin: 10px auto;
+  border: 1px solid #70af85 ;
+  border-radius: 10px;
 }
