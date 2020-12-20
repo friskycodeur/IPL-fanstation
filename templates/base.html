@@ -31,12 +31,28 @@
       class="sticky-top navbar navbar-expand-lg navbar-dark bg-primary navbar-custom"
     >
     <a class="navbar-brand mr-4 text-black-50 font-weight-bold" href="{% url 'player_list' %}">IPLFanStation</a>
-     <!-- Search bar -->
-<!-- <div class="search-bar">
-<form action="/search" method="get">
-<input type="text" name="query" class="form-control" id="query" placeholder="Search doubts">
-</form>
-</div> -->
+
+          <!-- Naviagtion options -->
+          <ul class="navbar-nav navbar-center">
+            <li>
+              <h1 class="text-black-50">|</h1>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light text-black-50" href="{% url 'player_list'%}"><i class="fa fa-id-card-o fa-2x"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light text-black-50" href="{% url 'home' %}"><i class="fa fa-home fa-2x"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light text-black-50" href="#"><i class="fa fa-newspaper-o fa-2x"></i></a>
+            </li>
+            <li>
+              <h1 class="text-black-50">|</h1>
+            </li>
+            </ul>
+    
+
+    
       <!-- Social media handles -->
       <ul class="navbar-nav ml-auto nav-flex-icons">
         <li class="nav-item">
@@ -50,11 +66,11 @@
         </li>
         {% if user.is_authenticated %}
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> 
+            <a class="nav-link waves-effect waves-light text-black-50" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user fa-2x"></i> 
                 </a>
             <div class="dropdown-menu dropdown-menu-right dropdown-unique" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
-                <a class="dropdown-item" href="{% url 'new_player' %}">Add Player</a>
+                <a class="dropdown-item" href="{% url 'player_new' %}">Add Player</a>
                 <a class="dropdown-item" href="#">Write Post</a>
             </div>
         </li>

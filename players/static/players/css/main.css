@@ -3,10 +3,17 @@ body{
   background-color: whitesmoke;
 }
 
+
+/* Navbar */
 .navbar-custom {
   background-color:#A8D49D !important; 
 }
 
+.navbar-nav.navbar-center { 
+  position: absolute; 
+  left: 50%; 
+  transform: translatex(-50%); 
+} 
 
 .card-container{
   background-color: #4EA838;
@@ -14,6 +21,43 @@ body{
   margin: 10px auto;
   border: 1px solid #70af85 ;
   border-radius: 10px;
+}
+
+
+/* Showcase */
+
+#showcase {
+  color: #fff;
+  background: #333;
+  padding: 2rem;
+  position: relative;
+}
+
+#showcase:before {
+  content: "";
+  background: url("https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Orange-Pattern-Simple-Background-Image.jpg") no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+#showcase .showcase-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+#showcase .showcase-content {
+  z-index: 1;
+}
+
+#showcase .showcase-content p {
+  margin-bottom: 1rem;
 }
 
 /* Login Page */

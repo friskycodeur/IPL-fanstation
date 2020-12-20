@@ -1,0 +1,55 @@
+{% extends "base.html "%}
+{% block content %}
+<div class="text-center m-3">
+<h1 class="mb-3 text-center"> {{view.kwargs.username}}'s Posts ({{page_obj.paginator.count}})</h1>
+</div>
+{% for post in posts %}
+
+
+<div class="text-center">
+  <div class="card mb-3 ml-0 article col-12" >
+      <div class="row no-gutters">
+        <div class="col-md-4 card-header border-0">
+          <img src="{{ post.pic.url }}" class="card-img" alt="..." />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+              <h5 class=" card-title">
+                <strong> <a href="{% url 'post-detail' post.id %}" class="post_title"> {{post.title}} </a> </strong>
+              </h5>
+            </div>
+            <p class="card-text text-left ml-3">
+              {{post.content}}
+            </p>
+            <p class="card-text">
+              <small class="text-muted card-footer"
+                >Posted by <a href="{% url 'user-posts' post.author.username %}"> {{post.author}} </a> on {{post.date_posted|date:"F d, Y"}}  </small
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endfor %}
+<div class="text-center">
+  {% if is_paginated %}
+    {% if page_obj.has_previous %}
+      <!-- <a class="btn btn-outline-info mb-4" href="?page=1">First</a> -->
+      <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+    {% endif %}
+
+    {% for num in page_obj.paginator.page_range %}
+      {% if page_obj.number == num %}
+        <a class="btn btn-info mb-4" href="?page={{ num }}">{{num}}</a>
+      {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3'  %}
+      <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{num}}</a>
+      {% endif %}
+    {% endfor %}
+  
+    {% if page_obj.has_next %}
+    <a class="btn btn-outline-info mb-4" href="?page={{page_obj.next_page_number}}">Next</a>
+    <!-- <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a> -->
+  {% endif %}
+  {% endif %}
+</div>
+{% endblock content %}
