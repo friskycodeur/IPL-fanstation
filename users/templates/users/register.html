@@ -6,14 +6,14 @@
         <form method="POST">
         {% csrf_token %}
         <fieldset class="form-group">
-            <legend class='border-bottom text-center'>Register</legend>
+            <legend class='border-bottom text-center'>Create an account</legend>
             
             <div class="m-3">
             {{ form|crispy  }}
         </div>
         </fieldset>
         <div class="text-center m-3">
-            <button class='btn btn-outline-info justify-center' type='submit'>Sign Up</button>
+            <button class='btn btn-outline-success justify-center' type='submit'>Sign Up</button>
         </div>
         
         </form>
