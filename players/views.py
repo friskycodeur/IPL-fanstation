@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.utils import timezone
 from .models import Player
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -11,6 +11,7 @@ from django.views.generic import (
 
 class PlayerListView(ListView):
     model = Player
+    template_name='player_list.html'
 
 
 class PlayerDetailView(DetailView):
@@ -18,14 +19,14 @@ class PlayerDetailView(DetailView):
 
 class CreatePlayerView(LoginRequiredMixin, CreateView):
     login_url = '/login/'
-    redirect_field_name = 'players/player_detail.html'
+    redirect_field_name = 'player_detail.html'
 
     form_class = PlayerForm
     model = Player
 
 class UpdatePlayerView(LoginRequiredMixin, UpdateView):
     login_url = '/login/'
-    redirect_field_name = 'players/player_detail.html'
+    redirect_field_name = 'player_detail.html'
 
     form_class = PlayerForm
     model = Player
