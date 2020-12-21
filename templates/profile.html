@@ -2,28 +2,24 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-
-<div class="jumbotron mt-3">
-    <div class="media">
-      <div class="media-body">
-        <h2 class="account-heading text-center">Welcome , {{ user.username }} !</h2>
-        <p class="text-secondary text-center">{{ user.email }}</p>
-      </div>
-    </div>
-    <!-- FORM HERE -->
-    <div class="content-section mt-3">
-      <form method="POST" enctype="multipart/form-data">
-      {% csrf_token %}
-      <fieldset class="form-group">
-        <legend class='border-bottom mb-4 text-center'>Profile Details </legend>
-        {{ u_form|crispy  }}
-        
-    </fieldset>
-    <div class="text-center">
-        <button class='btn justify-center btn-success' type='submit'>Update</button>
-      </div>
-      </form>
-      </div>
+<div class="container p-3 mx-auto d-block mb-0 post-form">
+  <div class="text-center">
+  <h2 class="mb-0"> Hey , {{user.username}} !</h2>
+  <p class="mt-0"> Welcome to your profile </p>
+</div>
+  <form method="POST" enctype="multipart/form-data"> 
+  {% csrf_token %}
+  <fieldset class="form-group">
+      <legend class='border-bottom mb-0 text-center'>Here are your Profile Details</legend>
+      <p class="mt-0 text-black-50 text-center">You can also change them if you want to</p>
+      {{ u_form|crispy  }}
+      
+  </fieldset>
+  <div class="text-center">
+      <button class='btn btn-outline-success justify-center' type='submit'>Update</button>
   </div>
+  
+  </form>
+</div>
 
 {% endblock content %}
