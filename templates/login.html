@@ -4,7 +4,7 @@
 {% block content %}
 
 <div class="container form-container p-3 mx-auto d-block mb-0 w-25">
-    <img src="{% static 'users/img/login-img.jpg' %}" class="mx-auto d-block mb-3" alt="..." />
+    <img src="{% static 'players/img/login-img.jpg' %}" class="mx-auto d-block mb-3" alt="..." />
     <form method="POST">
         {% csrf_token %}
         {{ form|crispy  }}
@@ -20,29 +20,5 @@
   <p class="text-center text-muted mt-1">
   Don't have an account yet? <a href="{% url 'register' %}">Register now</a>
 </p>
-
-
-
-    <!-- <div class="container form-container p-3" style="opacity:0.8 ;">
-     <div class="content-section jumbotron mt-3">
-        <img src="{% static 'blog/img/login.jpg' %}" class="mx-auto d-block mb-3" alt="..." />
-        <form method="POST">
-        {% csrf_token %}
-        <fieldset class="form-group">
-            <legend class='border-bottom mb-4 text-center'>Login</legend>
-            {{ form|crispy  }}
-            
-        </fieldset>
-        <div class="text-center m-3">
-            <button class='btn btn-outline-info justify-center' type='submit'>Login</button>
-        </div>
-        <div class="text-center">
-            <small class="muted"> <a class='ml-2' href="{% url 'password_reset' %}">Forgot Password? </a> </small>
-        </div>
-        </form>
-        <div class="border-top pt-3 text-center mb-3">
-            <small class="muted"> Don't have an account ?<a class='ml-2' href="{% url 'register' %}">Sign up Now</a> </small>
-        </div>
-    </div> -->
 
 {% endblock content%}

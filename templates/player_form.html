@@ -1,20 +1,20 @@
 {% extends "base.html"%}
 {% load crispy_forms_tags %}
 {% block content %}
-    <div class="box hero m-3 is-light w-75">
+    <div class="container p-3 mx-auto d-block post-form w-75">
         <form method="POST" enctype="multipart/form-data"> 
         {% csrf_token %}
         <fieldset class="form-group">
             <div class="hero-head has-text-centered ">
-            <legend class='border-bottom mb-2 text-center title m-3'>Add Player</legend>
-            <div class="text-muted text-center has-text-weight-light mt-4"> Add the player details of IPL for the player you want to add</div>
+            <legend class='border-bottom text-center'>Add Player</legend>
+            <div class="text-muted text-center mb-3 text-black-50">  <h6>Add the player details of IPL for the player you want to add</h6></div>
         </div>
             <div class="hero-body has-text-dark">
             {{ form|crispy}}
             </div>
         </fieldset>
-        <div class="has-text-centered m-3">
-            <button class='button is-success is-outlined is-rounded' type='submit'>Add Player</button>
+        <div class="text-center">
+            <button class='btn btn-outline-success justify-center' type='submit'>Add Player</button>
         </div>
         
     

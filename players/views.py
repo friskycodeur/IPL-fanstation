@@ -19,6 +19,7 @@ class PlayerDetailView(DetailView):
 
 class CreatePlayerView(LoginRequiredMixin, CreateView):
     login_url = '/login/'
+    template_name='player_form.html'
     redirect_field_name = 'player_detail.html'
 
     form_class = PlayerForm

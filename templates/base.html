@@ -41,7 +41,7 @@
                 <a class="nav-link waves-effect waves-light text-black-50" href="{% url 'player_list'%}"><i class="fa fa-id-card-o fa-2x"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link waves-effect waves-light text-black-50" href="{% url 'home' %}"><i class="fa fa-home fa-2x"></i></a>
+                <a class="nav-link waves-effect waves-light text-black-50" href="{% url 'blog-home' %}"><i class="fa fa-home fa-2x"></i></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link waves-effect waves-light text-black-50" href="#"><i class="fa fa-newspaper-o fa-2x"></i></a>
@@ -71,7 +71,8 @@
             <div class="dropdown-menu dropdown-menu-right dropdown-unique" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
                 <a class="dropdown-item" href="{% url 'player_new' %}">Add Player</a>
-                <a class="dropdown-item" href="#">Write Post</a>
+                <a class="dropdown-item" href="{% url 'post-create' %}">Write Post</a>
+                <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
             </div>
         </li>
         {% else %}
