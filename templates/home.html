@@ -8,9 +8,12 @@
       <div class="container">
         <div class="showcase-container">
           <div class="showcase-content">
+            
+        
+            <p class="tag">Latest Post</p>
             <h1>{{post.title}}</h1>
             <p>
-              {{post.content|truncatechars:60}}
+              {{post.content|truncatechars:90}}
             </p>
             <a href="{% url 'post-detail' post.id %}" class="btn btn-primary">Read More</a>
           </div>

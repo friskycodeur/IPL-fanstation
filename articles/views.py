@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 def home(request): 
     context={
-        'posts':Post.objects.filter(published=True).order_by('-pub_date')[0:1]
+        'posts':Post.objects.order_by('-date_posted')[0:1]
     }
     return render(request,'home.html',context)
 

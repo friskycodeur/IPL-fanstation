@@ -19,6 +19,14 @@ body{
   background-color: var(--submain);
 }
 
+.tag{
+  background: var(--submain);
+  width: 6rem;
+  padding: 5px;
+  border-radius: 15px;
+  text-align: center;
+}
+
 
 /* Navbar */
 .navbar-custom {
@@ -171,7 +179,7 @@ body{
 
 #showcase:before {
   content: "";
-  background: url("https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Orange-Pattern-Simple-Background-Image.jpg") no-repeat center center/cover;
+  background-image: linear-gradient(to bottom left ,#17ead9,#6078ea );
   position: absolute;
   top: 0;
   left: 0;
