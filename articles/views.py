@@ -12,7 +12,7 @@ def home(request):
 
 class PostListView(ListView):
     model = Post
-    template_name='home.html'
+    template_name='post_list.html'
     context_object_name = 'posts'
     ordering=['-date_posted']
     paginate_by= 4
@@ -31,6 +31,7 @@ class UserPostListView(ListView):
 
 class PostDetailView(DetailView):
     model=Post
+    template_name='post_detail.html'
 
 
 class PostCreateView(LoginRequiredMixin,CreateView):
@@ -43,6 +44,7 @@ class PostCreateView(LoginRequiredMixin,CreateView):
 
 class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
     model=Post
+    template_name='post_form.html'
     fields=['title','content']
 
     def form_valid(self,form):

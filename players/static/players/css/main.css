@@ -2,6 +2,7 @@
   --main:#2C3A47;
   --submain:#F97F51;
   --gradient:#fe4880;
+  --lightt:rgb(240, 219, 219);
 }
 
 body{
@@ -239,6 +240,17 @@ body{
   margin-bottom: 2.7rem;
   font-size: 1.1rem;
   border: 2px solid var(--submain);
+}
+
+
+/* Post card */
+
+.post-detail{
+  background-image: linear-gradient(to bottom left ,#C56CD6,#3425AF);
+  border-radius:15px;
+  margin: 3rem;
+  opacity: 0.9;
+  padding: 1rem;
 }
 
 /* Footer */
