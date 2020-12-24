@@ -23,8 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECURITY WARNING: don't run with debug turned on in production!
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
+SECRET_KEY = 'lmfa1jjv^)zzz^zqc^!519+_%-8&&nx2!&#^k4jr@*(ny%l_e_'
+DEBUG = False
 
 DATABASES = {
     'default': dj_database_url.config()
