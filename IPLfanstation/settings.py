@@ -10,9 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
-import os
 import django_heroku
-import dj_database_url
+import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,11 +24,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 SECRET_KEY = 'lmfa1jjv^)zzz^zqc^!519+_%-8&&nx2!&#^k4jr@*(ny%l_e_'
-DEBUG = False
+DEBUG = True
 
-DATABASES = {
-    'default': dj_database_url.config()
-}
 
 ALLOWED_HOSTS = ['*']
 
