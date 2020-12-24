@@ -23,7 +23,7 @@ def profile(request):
     if request.method=="POST":
         u_form=UserUpdateForm(request.POST,request.FILES,instance=request.user)
 
-        if u_form.is_valid() and p_form.is_valid():
+        if u_form.is_valid():
             u_form.save()
             messages.success(request,f'You account has been updated.')
             return redirect('profile')
