@@ -1,1 +1,1 @@
-web: gunicorn IPLfanstation.wsgi
+web: gunicorn IPLfanstation.wsgi:application --log-file
