@@ -1,7 +1,7 @@
 :root {
-  --main:#2C3A47;
-  --submain:#F97F51;
-  --gradient:#fe4880;
+  --main:#006d77;
+  --submain:#83c5be;
+  --gradient:#edf6f9;
   --lightt:rgb(240, 219, 219);
 }
 
@@ -96,8 +96,10 @@ body{
 
 
 .card__face--front h2{
-  color: #fff;
+  color: rgb(63, 62, 62);
   font-size: 32px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 3px grey;
 }
 
 .card__face--back{
@@ -179,7 +181,7 @@ body{
 
 #showcase:before {
   content: "";
-  background-image: linear-gradient(to bottom left ,#17ead9,#6078ea );
+  background-image: linear-gradient(to bottom left ,#e29578,#edf6f9 );
   position: absolute;
   top: 0;
   left: 0;
@@ -213,7 +215,7 @@ body{
   margin-top: 2.7rem;
   margin-bottom: 2.7rem;
   font-size: 1.1rem;
-  border: 2px dashed #4EA838;
+  border: 2px dashed var(--submain);
   max-width: 600px;
 }
 

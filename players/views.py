@@ -16,6 +16,7 @@ class PlayerListView(ListView):
 
 class PlayerDetailView(DetailView):
     model = Player
+    template_name='player_detail.html'
 
 class CreatePlayerView(LoginRequiredMixin, CreateView):
     login_url = '/login/'

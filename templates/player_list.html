@@ -22,7 +22,13 @@
           <p>
             <b>Age : </b> {{player.age}} <br>
             <b>Matches :</b> {{player.total_matches}} <br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, possimus?
+            {% if player.role == 'Batsman' %}
+            <b>Runs : </b> {{player.total_runs}} <br>
+            <b>Highest Score:</b> {{player.highest_score}} <br>
+            {% else %}
+            <b>Wickets: </b> {{player.total_wickets}} <br>
+            <b>Best Figures: </b> {{player.best_bowling_figures}} <br>
+            {% endif %}
           </p>
         </div>
       </div>
