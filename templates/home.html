@@ -11,8 +11,8 @@
             
         
             <p class="tag">Latest Post</p>
-            <h1>{{post.title}}</h1>
-            <p>
+            <h1 class="text-black-50">{{post.title}}</h1>
+            <p class="text-black-50">
               {{post.content|truncatechars:90}}
             </p>
             <a href="{% url 'post-detail' post.id %}" class="btn btn-primary">Read More</a>
@@ -20,5 +20,22 @@
         </div>
       </div>
     </header>
+    <div class="d-flex bd-highlight">
+      <div class="p-2 flex-fill bd-highlight m-3 home-card">
+        <p class="text-center"> Catch up with the latest articles ! </p>
+        
+       <div class="text-center"> <a href="{% url 'blog-home' %}" class="btn btn-warning ">Read Articles</a></div>
+      </div>
+      <div class="p-2 flex-fill bd-highlight m-3 home-card">
+        <p class="text-center"> See stats of your favourite players ! </p>
+        
+       <div class="text-center"> <a href="{% url 'player_list' %}" class="btn btn-warning ">View Players</a></div>
+      </div>
+      <div class="p-2 flex-fill bd-highlight m-3 home-card">
+        <p class="text-center"> Want to write articles and add players to the site? </p>
+        
+       <div class="text-center"> <a href="{% url 'register' %}" class="btn btn-warning ">Sign up</a></div>
+      </div>
+    </div>
 {% endfor %}
 {% endblock content %}

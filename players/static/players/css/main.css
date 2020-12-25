@@ -184,11 +184,11 @@ body{
   font-size: 22px;
 }
 
-/* Showcase */
+/* Homepage */
 
 #showcase {
   color: #fff;
-  background: #333;
+  background: var(--gradient);
   padding: 2rem;
   position: relative;
 }
@@ -220,6 +220,15 @@ body{
   margin-bottom: 1rem;
 }
 
+
+.home-card{
+  background-color:#83c5be !important;
+  border-radius: 70px;
+  padding: 2rem !important;
+  font-size: 20px;
+  color: #3f3f3f;
+  font-weight: bold; 
+}
 /* Login Page */
 
 .form-container {
