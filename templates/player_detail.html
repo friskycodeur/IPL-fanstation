@@ -1,13 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="jumbotron m-3">
-  <h1 class="text-center m-3">
+  <h1 class="text-center mb-0">
     <strong> {{object.name}} </strong>
 </h1>
-    <p class="card-text mb-3 text-center">
+    <p class="card-text mb-3 mt-0 text-center text-capitalize">
         {{object.nationality}}
       </p>
-  <p class="card-text m-3">
+  <p class="card-text m-3 text-center align-items-center">
+    <div class="stats-main"><b>Name  </b> :   {{object.name}} <br> </div>
+    <div class="stats-main"><b>Age  </b> :  {{object.age}} <br> </div>
+    <div class="stats-main"><b>Country  </b> :  {{object.nationality}} <br> </div>
+    <div class="stats-main"><b>Role  </b> :  {{object.role}} <br> </div>
+    <div class="stats-main"><b>Batting Style  </b> :   {{object.batting_style}} <br> </div>
+    <div class="stats-main"><b>Bowling Style  </b> :   {{object.bowling_style}} <br> </div>
+    <div class="stats-main"><b>Total Matches  </b> :   {{object.total_matches}} <br> </div>
+    <div class="stats-main"><b>Total Runs  </b> :   {{object.total_runs}} <br> </div>
+    <div class="stats-main"><b>Highest Score  </b> :   {{object.highest_score}} <br> </div>
+    <div class="stats-main"><b>Best Bowling Figures  </b> :   {{object.best_bowling_figures}} <br> </div>
+    <div class="stats-main"><b>Average  </b> :   {{object.avg}} <br> </div>
+    <div class="stats-main"><b>Economy  </b> :   {{object.economy}} <br> </div>
+    <div class="stats-main"><b>Five Wicket haul  </b> :   {{object.five_wickets}} <br> </div>
+    <div class="stats-main"><b>Fifties  </b> :   {{object.fifties}} <br> </div>
+    <div class="stats-main"><b>Hundreds  </b> :   {{object.hundreds}} <br> </div>
   </p>
   
 </div>
