@@ -270,7 +270,7 @@ body{
 /* Post card */
 
 .post-detail{
-  background-image: linear-gradient(to bottom left ,#C56CD6,#3425AF);
+  background-image: linear-gradient(to bottom left ,var(--main),var(--submain));
   border-radius:15px;
   margin: 3rem;
   opacity: 0.9;

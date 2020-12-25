@@ -7,7 +7,7 @@
     </h1>
     <p class="card-text m-3">
       <small class="text-muted text-white-50"
-        >Posted by <a href="{% url 'user-posts' post.author.username %}"> {{post.author}} </a> on {{post.date_posted|date:"F d, Y"}}  </small
+        >Posted by <a href="{% url 'user-posts' post.author.username %}" class="text-white"> {{post.author}} </a> on {{post.date_posted|date:"F d, Y"}}  </small
       >
   {% if post.author == user %}
   <div class="text-left m-3">
@@ -20,7 +20,7 @@
       {{post.content|truncatechars:100}}
     </p>
     <div class="text-center m-0">
-    <a href="{% url 'post-detail' post.id %}" class="btn btn-warning btn-sm">Read More</a>
+    <a href="{% url 'post-detail' post.id %}" class="btn btn-info btn-sm">Read More</a>
 </div>
   </div>
 {% endfor %}
