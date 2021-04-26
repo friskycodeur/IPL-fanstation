@@ -1,16 +1,21 @@
 :root {
-  --main:#006d77;
-  --submain:#83c5be;
-  --gradient:#edf6f9;
+  --main:#d8e3e7;
+  --submain:#51c4d3;
+  --gradient:#126e82;
   --lightt:rgb(240, 219, 219);
 }
 
 body{
-  font-family: 'Padauk', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: whitesmoke;
 }
 
 /* utilities */
+
+.theme_color {
+	color:var(--submain);
+}
+
 
 .btn-custom{
   border:1px solid var(--submain);
@@ -30,7 +35,7 @@ body{
 
 /* Navbar */
 .navbar-custom {
-  background-color: var(--main) !important;
+  background-color: var(--submain) !important;
   font-size: 18px;
   padding-bottom: 2px;
 }
@@ -209,7 +214,7 @@ body{
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 45vh;
 }
 
 #showcase .showcase-content {
@@ -220,14 +225,45 @@ body{
   margin-bottom: 1rem;
 }
 
+/* Homepage - Sections */
+
+.layout_padding {
+	padding-top: 75px;
+	padding-bottom: 75px;
+}
+
+.heading_main h2 {
+  font-size: 45px;
+  letter-spacing: -0.5px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  text-transform: uppercase;
+  line-height: 52px !important;
+}
+
+.text_align_right_img img {
+  position: relative;
+  right: 15px;
+  top:40px;
+  box-shadow: 0px 10px 5px 0 rgba(0,0,0,.2);
+}
+
 
 .home-card{
-  background-color:#83c5be !important;
-  border-radius: 70px;
+  background:var(--main) !important;
   padding: 2rem !important;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   font-size: 20px;
-  color: #3f3f3f;
+  color: #1b2021;
   font-weight: bold; 
+}
+
+.home-card:hover{
+  box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
 }
 /* Login Page */
 
@@ -289,7 +325,7 @@ body{
 /* Footer */
 footer{
   display: flex;
-  background-color: var(--main);
+  background-color: var(--submain);
   width: 25%;
   border: 1px solid #fff ;
   border-top-left-radius: 10px;
