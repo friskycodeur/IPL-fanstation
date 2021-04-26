@@ -20,22 +20,113 @@
         </div>
       </div>
     </header>
-    <div class="d-flex bd-highlight">
+
+    <!-- "Check out Article" Section start-->
+    <div class="section about_section layout_padding half_bg_theme padding_bottom_0">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6">
+               <div class="full text_align_right_img">
+                  <img src="https://s.yimg.com/ny/api/res/1.2/_MzxnTaU9tEqOB24bxeguQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTYzOS4xMDQ4OTUxMDQ4OTUx/https://s.yimg.com/uu/api/res/1.2/nsPEICkvvYDMSVl4rdZJ8g--~B/aD00NzY7dz03MTU7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/cricket_addictor_924/a3063e356fdba9113d43dcbcdc9483d0" alt="#" width="500px"/>
+               </div>
+            </div>
+            <div class="col-md-6">
+               <div class="full paddding_left_15">
+                  <div class="heading_main mb-3">
+                     <h2><span class="theme_color">Catch up on </span><br>Latest Articles</h2>
+                  </div>
+               </div>
+               <div class="full p-1">
+                  <p>IPLFanstation has a variety of articles ranging from player to teams to fan theories. Jump on , read the latest articles , read about your favorite team or player, we got it all here. <br>
+                    <br>If you want to read articles related to a team , you can use the tags option so that you can only articles related to that team.
+                  </p>
+               </div>
+               <div class="full paddding_left_15 margin-top_30">
+                <a href="{% url 'blog-home' %}" class="btn btn-outline-primary">Article Section <i class="fa fa-long-arrow-right"></i></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Section end -->
+
+
+    <!-- "Check out Player Stats" Section start-->
+    <div class="section about_section layout_padding half_bg_theme padding_bottom_0">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6">
+               <div class="full text_align_right_img">
+                  <img src="https://static.toiimg.com/thumb/msid-78930006,width-1200,height-900,resizemode-4/.jpg" alt="#" width="500px"/>
+               </div>
+            </div>
+            <div class="col-md-6">
+               <div class="full paddding_left_15">
+                  <div class="heading_main mb-3">
+                     <h2><span class="theme_color">Checkout your</span><br> Favorite Player's Stats</h2>
+                  </div>
+               </div>
+               <div class="full p-1">
+                  <p>Want to check out about the statistics of your favorite player? How many wickets have Rashid Khan taken in his IPL career? Was that Kohli's 10th fifty? How many matches has Rohit really played so far? Who has hit the most sixes in IPL history? The stats page is the answer to all of your questions.
+                    <br><br>
+                    So what are you waiting for, go ahead and get your answers. 
+                  </p>
+               </div>
+               <div class="full paddding_left_15 margin-top_30">
+                  <a class="btn btn-outline-primary" href="{% url 'player_list' %}">Stats Section <i class="fa fa-long-arrow-right"></i></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Section end -->
+    <!-- "Check out Article" Section start-->
+    <div class="section about_section layout_padding half_bg_theme padding_bottom_0">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6">
+               <div class="full text_align_right_img">
+                  <img src="https://c.ndtvimg.com/2020-11/okfm21t_rohit-sharma-happy-mumbai-indians-bcciipl_625x300_10_November_20.jpg?q=60" alt="#" width="500px"/>
+               </div>
+            </div>
+            <div class="col-md-6">
+               <div class="full paddding_left_15">
+                  <div class="heading_main mb-3">
+                     <h2><span class="theme_color">Join IPLFanstation</span><br> Register today </h2>
+                  </div>
+               </div>
+               <div class="full p-1">
+                  <p>Want to write an article on a something , a player , a team , a match , a approach you think that maybe the team should have taken to ensure victory?
+                    Or do you have some fan moments of your experience of a certain match?
+                    <br>Want to add something to the player data or add a new player in all?
+                    <br> You can do it all , just click on that sign up button ! 
+                    <br><br>Register today and be a part of IPLFanstation !
+                  </p>
+               </div>
+               <div class="full paddding_left_15 margin-top_30">
+                  <a class="btn btn-outline-primary" href="#">Sign Up <i class="fa fa-long-arrow-right"></i></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Section end -->
+    <!-- <div class="d-flex bd-highlight">
       <div class="p-2 flex-fill bd-highlight m-3 home-card">
         <p class="text-center"> Catch up with the latest articles ! </p>
         
-       <div class="text-center"> <a href="{% url 'blog-home' %}" class="btn btn-warning ">Read Articles</a></div>
+       <div class="text-center"> <a href="{% url 'blog-home' %}" class="btn btn-outline-primary ">Read Articles</a></div>
       </div>
       <div class="p-2 flex-fill bd-highlight m-3 home-card">
         <p class="text-center"> See stats of your favourite players ! </p>
         
-       <div class="text-center"> <a href="{% url 'player_list' %}" class="btn btn-warning ">View Players</a></div>
+       <div class="text-center"> <a href="{% url 'player_list' %}" class="btn btn-outline-primary">View Players</a></div>
       </div>
       <div class="p-2 flex-fill bd-highlight m-3 home-card">
-        <p class="text-center"> Want to write articles and add players to the site? </p>
+        <p class="text-center"> Have the latest data? Add them all. </p>
         
-       <div class="text-center"> <a href="{% url 'register' %}" class="btn btn-warning ">Sign up</a></div>
+       <div class="text-center"> <a href="{% url 'register' %}" class="btn btn-outline-primary ">Sign up</a></div>
       </div>
-    </div>
+    </div> -->
 {% endfor %}
 {% endblock content %}
