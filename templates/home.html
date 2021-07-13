@@ -11,8 +11,8 @@
             
         
             <p class="tag">Latest Post</p>
-            <h1 class="text-black-50">{{post.title}}</h1>
-            <p class="text-black-50">
+            <h1 class="text-white">{{post.title}}</h1>
+            <p class="text-white">
               {{post.content|truncatechars:90}}
             </p>
             <a href="{% url 'post-detail' post.id %}" class="btn btn-white">Read More</a>
