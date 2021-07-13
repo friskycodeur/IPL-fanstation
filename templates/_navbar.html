@@ -1,0 +1,92 @@
+<!-- <nav
+class="sticky-top navbar navbar-expand-md navbar-dark bg-primary navbar-custom"
+>
+<a class="navbar-brand mr-4 text-white-50 font-weight-bold" href="{% url 'player_list' %}">IPLFanStation</a>
+
+    <!-- Naviagtion options
+    <ul class="navbar-nav navbar-center">
+      <li class="nav-item">
+          <a class="nav-link waves-effect waves-light text-white-50" href="{% url 'player_list'%}"><i class="fa fa-id-card-o fa-2x"></i></a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link waves-effect waves-light text-white-50" href="{% url 'home' %}"><i class="fa fa-home fa-2x"></i></a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link waves-effect waves-light text-white-50" href="{% url 'blog-home' %}"><i class="fa fa-newspaper-o fa-2x"></i></a>
+      </li>
+      </ul>
+
+
+
+<!-- Social media handles
+<ul class="navbar-nav ml-auto nav-flex-icons">
+  <li class="nav-item">
+      <a class="nav-link waves-effect waves-light text-white-50"><i class="fa fa-twitter fa-2x"></i></a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link waves-effect waves-light text-white-50"><i class="fa fa-instagram fa-2x"></i></a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link waves-effect waves-light text-white-50"><i class="fa fa-pinterest fa-2x"></i></a>
+  </li>
+  <li class="nav-item">
+      <h1 class="text-white-50">|</h1>
+  </li>
+  {% if user.is_authenticated %}
+  <li class="nav-item dropdown">
+      <a class="nav-link waves-effect waves-light text-white-50" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user fa-2x"></i> 
+          </a>
+      <div class="dropdown-menu dropdown-menu-right dropdown-unique" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
+          <a class="dropdown-item" href="{% url 'player_new' %}">Add Player</a>
+          <a class="dropdown-item" href="{% url 'post-create' %}">Write Post</a>
+          <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+      </div>
+  </li>
+  {% else %}
+  <li class="nav-item ">
+      <a class="nav-link mt-1 btn btn-light text-black-50 mr-0" href="{% url 'register' %}">Sign Up</a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link mt-1 text-white-50 ml-0" href="{% url 'login' %}">Login</a>
+  </li>
+  {% endif %}
+</ul>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary navbar-color-change">
+    <a class="navbar-brand font-weight-bolder text-white-50" href="#">IPLFanStation</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link text-white " href="{% url 'home' %}">Home</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'blog-home' %}">Articles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'player_list'%}">Players</a>
+        </li>
+        {% if user.is_authenticated %}
+        <li class="nav-item dropdown">
+            <a class="nav-link text-white" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Profile</a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-unique mx-3" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
+                <a class="dropdown-item" href="{% url 'player_new' %}">Add Player</a>
+                <a class="dropdown-item" href="{% url 'post-create' %}">Write Post</a>
+                <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+            </div>
+        </li>
+        {% else %}
+
+        <a class="nav-link text-white" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><i class="fa fa-angle-down text-white"></i></a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-unique mx-3 my-1" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{% url 'register' %}">Sign Up</a>
+                <a class="dropdown-item" href="{% url 'login' %}">Login</a>
+            </div>
+        {% endif %}
+      </ul>
+  </nav>
