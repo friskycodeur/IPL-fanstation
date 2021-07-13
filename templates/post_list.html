@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 {% for post in posts %}
-<div class="post-detail">
+<div class="post-template">
     <h1 class="text-left m-3 text-white">
       <strong>{{post.title}} </strong>
     </h1>
@@ -20,7 +20,7 @@
       {{post.content|truncatechars:100}}
     </p>
     <div class="text-center m-0">
-    <a href="{% url 'post-detail' post.id %}" class="btn btn-info btn-sm">Read More</a>
+    <a href="{% url 'post-detail' post.id %}" class="btn btn-white btn-sm">Read More</a>
 </div>
   </div>
 {% endfor %}
