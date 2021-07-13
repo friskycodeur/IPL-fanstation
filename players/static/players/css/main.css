@@ -1,12 +1,12 @@
 :root {
-  --main:#d8e3e7;
-  --submain:#51c4d3;
-  --gradient:#126e82;
+  --main:#EFF0F4;
+  --submain:#264E86;
+  --gradient:#0074E4;
   --lightt:rgb(240, 219, 219);
 }
 
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: whitesmoke;
 }
 
@@ -23,6 +23,16 @@ body{
 .btn-custom:hover,.btn-custom:active{
   background-color: var(--submain);
 }
+.btn-white{
+  background-color: var(--main);
+  color:var(--submain);
+  font-weight: bold;
+}
+.btn-white:hover{
+  opacity:0.9;
+  color: var(--submain);
+  
+}
 
 .tag{
   background: var(--submain);
@@ -34,27 +44,9 @@ body{
 
 
 /* Navbar */
-.navbar-custom {
+.navbar-color-change{
   background-color: var(--submain) !important;
-  font-size: 18px;
-  padding-bottom: 2px;
 }
-
-.navbar-nav.navbar-center { 
-  position: absolute; 
-  left: 50%; 
-  transform: translatex(-50%); 
-} 
-
-
-.nav-icon{
-  font-size: 20px;
-  font-weight: bold;
-  padding:5px;
-  margin-left: 0px !important;
-  margin-right: 0px !important;
-}
-
 
 /* Card */
 
@@ -195,17 +187,11 @@ body{
   color: #fff;
   background: var(--gradient);
   padding: 2rem;
-  position: relative;
 }
 
 #showcase:before {
   content: "";
   background-image: linear-gradient(to bottom left ,#e29578,#edf6f9 );
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   opacity: 0.4;
 }
 
@@ -214,7 +200,6 @@ body{
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
-  height: 45vh;
 }
 
 #showcase .showcase-content {
@@ -314,8 +299,9 @@ body{
 
 /* Post card */
 
-.post-detail{
-  background-image: linear-gradient(to bottom left ,var(--main),var(--submain));
+.post-template{
+  /* background-image: linear-gradient(to bottom left ,var(--main),var(--submain)); */
+  background-color: #264E86;
   border-radius:15px;
   margin: 3rem;
   opacity: 0.9;
@@ -331,4 +317,13 @@ footer{
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding-top: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  footer {
+    width: 100%;
+    border-radius: 0;
+    border: 0px;
+  }
 }
