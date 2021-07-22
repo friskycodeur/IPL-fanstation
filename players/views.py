@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.utils import timezone
 from .models import Player
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -11,24 +11,24 @@ from django.views.generic import (
 
 class PlayerListView(ListView):
     model = Player
-    template_name='player_list.html'
+    template_name='players/player_list.html'
 
 
 class PlayerDetailView(DetailView):
     model = Player
-    template_name='player_detail.html'
+    template_name='players/player_detail.html'
 
 class CreatePlayerView(LoginRequiredMixin, CreateView):
     login_url = '/login/'
-    template_name='player_form.html'
-    redirect_field_name = 'player_detail.html'
+    template_name='players/player_form.html'
+    redirect_field_name = 'players/player_detail.html'
 
     form_class = PlayerForm
     model = Player
 
 class UpdatePlayerView(LoginRequiredMixin, UpdateView):
     login_url = '/login/'
-    redirect_field_name = 'player_detail.html'
+    redirect_field_name = 'players/player_detail.html'
 
     form_class = PlayerForm
     model = Player
@@ -39,6 +39,6 @@ class PlayerDeleteView(LoginRequiredMixin, DeleteView):
 
 @login_required
 def player_publish(request, pk):
-    player = get_object_or_404(Post, pk=pk)
+    player = get_object_or_404(Player, pk=pk)
     player.publish()
     return redirect('player_detail', pk=pk)
