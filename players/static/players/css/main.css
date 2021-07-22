@@ -272,6 +272,19 @@ body{
   padding-top: 6vh !important;
 }
 
+.register-form-container {
+  background: #fff;
+  opacity: 0.8;
+  border-radius: 10px;
+  margin-top: 2.7rem;
+  margin-bottom: 2.7rem;
+  font-size: 1.1rem;
+  border: 2px dashed var(--submain);
+  max-width: 25vw;
+  height: 70vh;
+  padding-top: 6vh !important;
+}
+
 
 .form-container img {
   height: 16vh;
@@ -343,5 +356,7 @@ footer{
     width: 16vw;
     border-radius: 50%;
   }
-
+  .register-form-container{
+    max-width:50vw;
+  }
 }
