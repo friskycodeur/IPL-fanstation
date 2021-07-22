@@ -282,7 +282,6 @@ body{
   border: 2px dashed var(--submain);
   max-width: 25vw;
   height: 70vh;
-  padding-top: 6vh !important;
 }
 
 
