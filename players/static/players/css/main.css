@@ -357,5 +357,7 @@ footer{
   }
   .register-form-container{
     max-width:50vw;
+    padding:0.8rem !important;
+    font-size: 1rem;
   }
 }
