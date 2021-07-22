@@ -23,6 +23,13 @@ body{
 .btn-custom:hover,.btn-custom:active{
   background-color: var(--submain);
 }
+.btn-custom-login{
+  border:1px solid var(--submain);
+}
+.btn-custom-login:hover,.btn-custom-login:active{
+  background-color: var(--submain);
+  color: var(--main);
+}
 .btn-white{
   background-color: var(--main);
   color:var(--submain);
@@ -260,13 +267,15 @@ body{
   margin-bottom: 2.7rem;
   font-size: 1.1rem;
   border: 2px dashed var(--submain);
-  max-width: 600px;
+  max-width: 25vw;
+  height: 60vh;
+  padding-top: 6vh !important;
 }
 
 
 .form-container img {
-  height: 120px;
-  width: 120px;
+  height: 16vh;
+  width: 8vw;
   border-radius: 50%;
 }
 .btn-login {
@@ -326,4 +335,13 @@ footer{
     border-radius: 0;
     border: 0px;
   }
+  .form-container{
+    max-width:50vw;
+  }
+  .form-container img {
+    height: 16vh;
+    width: 16vw;
+    border-radius: 50%;
+  }
+
 }
